@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {connect} from 'react-redux';
+
 class App extends React.Component{
   componentDidMount() {
     fetch('http://localhost:3000/accounts')
@@ -9,10 +11,10 @@ class App extends React.Component{
   render()  {
   return (
     <div className="App">
-      dch 
+      dch
     </div>
   );
   }
 }
 
-export default App;
+export default connect(null, fetchAccounts())(App);
