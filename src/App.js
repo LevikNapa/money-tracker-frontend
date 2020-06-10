@@ -1,20 +1,17 @@
 import React from 'react';
+import AccountsContainer from './containers/AccountsContainer'
 
 import {connect} from 'react-redux';
 
 class App extends React.Component{
-  componentDidMount() {
-    fetch('http://localhost:3000/accounts')
-    .then(data => data.json())
-    .then(data => console.log(data))
-  }
+  
   render()  {
   return (
     <div className="App">
-      dch
+      <AccountsContainer />
     </div>
   );
   }
 }
 
-export default connect(null, fetchAccounts())(App);
+export default App;
